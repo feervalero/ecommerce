@@ -9,3 +9,49 @@
 //new change
 //added in computer MK
 //addes from hp computer
+
+OrderExample
+{
+	contact:"02020202",
+	created_date:"2017-07-07 15:22:33.000",
+	stage:"90",
+	status:"1",
+	products:{
+		sku:"10011001",
+		quantity:"1",
+		name:"Corrector Facial",
+		price:"1050.50",
+		price_discount:"700"
+	},
+	shipping_address:{
+
+	},
+	total:"700",
+	total_extra:{
+		taxes:"112",
+		freight:"97.44"
+	},
+	payments:{
+		payment_type:"1",
+		credit_card:"99795729",
+		amount:"909.44",
+		status:"1"
+	}
+
+}
+
+ContactExample
+{
+	contact:"02020202",
+	first_name:"Fernando",
+	last_name:"Valero",
+	fb_id:"683063063",
+	start_date:"2017-07-06 12:00:22.000",
+	status:"1",
+	img_url:"#",
+	addresses:{},
+	lists:{
+		orders:{}
+	}
+
+}
