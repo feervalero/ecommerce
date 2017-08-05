@@ -23,7 +23,7 @@ All runs in http://localhost:/3000
   	<td>POST</td>
   	<td>/contacts/add</td>
   	<td>
-		Add user information<br>
+		Create a new user <br>
 		Content-Type: application/x-www-form-urlencoded<br>		
 	  </td>
   </tr>
