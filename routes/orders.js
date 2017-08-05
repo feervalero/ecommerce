@@ -14,5 +14,14 @@ router.get('/', function(req, res, next) {
   		res.json(orders);
   });
 });
+router.get('/:id', function(req, res, next) {
+  Orders.getOrdersByUserId(req.params.id,function(err,orders){
+  		if(err){
+  			throw err;
+  		}
+  		res.json(orders);
+  });
+});
+
 
 module.exports = router;

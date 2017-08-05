@@ -1,0 +1,20 @@
+Login page
+	if(loged) (1)
+	else (2)
+
+main page if logged
+	show cart with permanent session
+	show user details
+	(default stuff)
+main page if not logged
+	static page showing some features
+		(default stuff)
+		show login panel everywhere
+
+(1) load the main page and start a session with user datails
+(2) load main page with login button & register
+(default stuff) 
+	search
+	catalogs
+	promotions for consumer
+	cart with cookie session [temporal]
