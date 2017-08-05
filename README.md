@@ -10,9 +10,9 @@ All runs in http://localhost:/3000
   <th>Description</th>
 </tr>
   <tr>
-  <td>GET</td>
-  <td>/contacts</td>
-  <td>Get all contacts</td>
+	  <td>GET</td>
+	  <td>/contacts</td>
+	  <td>Get all contacts</td>
   </tr>
   <tr>
   	<td>GET</td>
@@ -29,6 +29,16 @@ All runs in http://localhost:/3000
 		Cache-Control: no-cache<br>
 		Postman-Token: 72951138-d6f2-a3b8-e482-228b4004bedb<br>
 		contact=02020207&first_name=Raul&last_name=Rios&fb_id=683063063&start_date=2017-07-03+12%3A00%3A22.000&status=1&img_url=%23&addresses=%7B%7D&lists=%7B%7D</td>
+  </tr>
+  <tr>
+  	<td>GET</td>
+  	<td>/orders</td>
+  	<td>Get all orders</td>
+  </tr>
+  <tr>
+  	<td>GET</td>
+  	<td>/orders/:id</td>
+  	<td>Get all orders by userid</td>
   </tr>
   
 </table>
