@@ -12,13 +12,13 @@
 OrderExample
 {
 	contact:"02020202",
-	created_date:"2017-07-07 15:22:33.000",
+	created_date:"2017-07-08 15:22:33.000",
 	stage:"90",
 	status:"1",
 	products:{
-		sku:"10011001",
-		quantity:"1",
-		name:"Corrector Facial",
+		sku:"10011002",
+		quantity:"2",
+		name:"Corrector Facial Precio Especial",
 		price:"1050.50",
 		price_discount:"700"
 	},
