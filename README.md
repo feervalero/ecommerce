@@ -23,11 +23,8 @@ All runs in http://localhost:/3000
   	<td>POST</td>
   	<td>/contacts/add</td>
   	<td>
-		POST /contacts/add/ HTTP/1.1<br>
-		Host: localhost:3000<br>
-		Content-Type: application/x-www-form-urlencoded<br>
-		Cache-Control: no-cache<br>
-		Postman-Token: 72951138-d6f2-a3b8-e482-228b4004bedb
+		Add user information<br>
+		Content-Type: application/x-www-form-urlencoded<br>		
 	  </td>
   </tr>
   <tr>
