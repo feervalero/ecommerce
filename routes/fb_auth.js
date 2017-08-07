@@ -17,7 +17,7 @@ router.get('/try', function(req,res){
                 if(data.statusCode=="200") {
                     token = JSON.parse(data.body).access_token;
                     console.log(token);
-                    res.json(token);
+                    res.redirect("http://localhost:3000/?access_token="+token);
                 }else if(data.statusCode=="400"){
                     res.redirect("https://www.facebook.com/v2.10/dialog/oauth?client_id=260558091103716&redirect_uri=http://localhost:3000/fbauth/try&response_type=code");
                 }
@@ -29,10 +29,7 @@ router.get('/try', function(req,res){
 
 
 });
-router.get('/token', function(req,res){
-    console.log(req);
-    res.send("token");
-});
+
 module.exports = router;
 
 /*
