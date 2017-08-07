@@ -39,3 +39,4 @@ All runs in http://localhost:/3000
   </tr>
   
 </table>
+<p></p> On going FB login is supported, the login is used by /fbauth uri
