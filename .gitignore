@@ -1,1 +1,4 @@
 node_modules
+.idea
+ecommerce.iml
+npm-debug.log
