@@ -4,11 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+/*Routes*/
 var index = require('./routes/index');
 var users = require('./routes/users');
 var orders = require('./routes/orders');
-var contacts = require('./routes/contacts')
+var contacts = require('./routes/contacts');
+var fb_auth = require('./routes/fb_auth');
 var app = express();
 global.IsLogged=false;
 // view engine setup
@@ -26,6 +27,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/orders',orders);
 app.use('/contacts',contacts);
+app.use('/fbauth',fb_auth);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
