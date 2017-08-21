@@ -6,6 +6,7 @@ var request = require('request');
 mongoose.connect('mongodb://localhost/basket');
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin','http://localhost:4200');
   contacts_model.getContacts(function(err,data){
   	if(err){
   		throw err;

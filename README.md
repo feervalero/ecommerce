@@ -37,6 +37,11 @@ All runs in http://localhost:/3000
   	<td>/orders/:id</td>
   	<td>Get all orders by userid</td>
   </tr>
+  <tr>
+    <td>GET</td>
+    <td>/products</td>
+    <td>Get All products</td>
+  </tr>
   
 </table>
 <p></p> On going FB login is supported, the login is used by /fbauth uri

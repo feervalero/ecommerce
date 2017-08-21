@@ -23,6 +23,11 @@ OrderExample
 		price_discount:"700"
 	},
 	shipping_address:{
+		Country:string,
+		State:string,
+		City:string,
+		Neighbourhood:string,
+		street_number:string
 
 	},
 	total:"700",
@@ -68,3 +73,58 @@ ContactExample
 	}
 
 }
+Products Example
+
+{
+	sku:"10077951"
+	display_name:"Loción para Cuerpo Thinking of Love® de Edición Limitada"
+	price:"160"
+	inventory:"1"
+	new:"0"
+}
+
+
+{"sku":"10046688","display_name":"Sombra Mineral Compacta Mary Kay® Polished Stone","price":"53.5","inventory":"1","new":"0"}
+{"sku":"10046676","display_name":"Sombra Mineral Compacta Mary Kay® Periwinkle","price":"53.5","inventory":"1","new":"0"}
+{"sku":"10046686","display_name":"Sombra Mineral Compacta Mary Kay® Rose Water","price":"53.5","inventory":"1","new":"0"}
+{"sku":"10046689","display_name":"Sombra Mineral Compacta Mary Kay® Sage","price":"39","inventory":"1","new":"0"}
+{"sku":"10075084","display_name":"Thinking of Love® 29 ml","price":"391","inventory":"1","new":"0"}
+{"sku":"10067230","display_name":"Belara Midnight® 50 ml","price":"365.5","inventory":"1","new":"1"}
+{"sku":"10081718","display_name":"Arctic Apricot","price":"182","inventory":"1","new":"1"}
+{"sku":"10081724","display_name":"Flamenco Red","price":"167","inventory":"0","new":"0"}
+{"sku":"10081721","display_name":"Magenta Chill","price":"167","inventory":"1","new":"0"}
+{"sku":"10081720","display_name":"Posh Pink","price":"182","inventory":"1","new":"0"}
+{"sku":"10077951","display_name":"Loción para Cuerpo Thinking of Love® de Edición Limitada","price":"160","inventory":"1","new":"0"}
+
+Profile 
+
+Mis compras (by Contact)
+{
+	"mismo contenido que mis ordenes"
+}
+
+Wishlist{
+	name:"mismo contenido que los partids solo que viene con el userasociado, debe ser una nueva tabla",
+	{"contact":"01010101","sku":"10046688","display_name":"Sombra Mineral Compacta Mary Kay® Polished Stone","price":"53.5","inventory":"1","new":"0"}
+}
+shipping_address:{
+	contact:"string",
+	Country:"string",
+	State:"string",
+	City:"string",
+	Neighbourhood:"string",
+	street_number:"string"
+
+}
+
+payments:{
+	payment_type:"1",
+	credit_card:"99795729",
+	amount:"909.44",
+	status:"1"
+}
+
+{"contact":"01010101","sku":"10046676","display_name":"Sombra Mineral Compacta Mary Kay® Periwinkle","price":"53.5","inventory":"1","new":"0"}
+{"contact":"01010101","sku":"10046689","display_name":"Sombra Mineral Compacta Mary Kay® Sage","price":"39","inventory":"1","new":"0"}
+{"contact":"01010101","sku":"10067230","display_name":"Belara Midnight® 50 ml","price":"365.5","inventory":"1","new":"1"}
+{"contact":"01010101","sku":"10081724","display_name":"Flamenco Red","price":"167","inventory":"0","new":"0"}
