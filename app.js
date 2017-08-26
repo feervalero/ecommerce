@@ -11,6 +11,7 @@ var orders = require('./routes/orders');
 var contacts = require('./routes/contacts');
 var products = require('./routes/products');
 var fb_auth = require('./routes/fb_auth');
+var mava = require('./routes/mava');
 var app = express();
 global.IsLogged=false;
 // view engine setup
@@ -24,7 +25,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.use('/',mava);
+app.use('/index', index);
 app.use('/users', users);
 app.use('/orders',orders);
 app.use('/contacts',contacts);
