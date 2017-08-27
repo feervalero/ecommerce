@@ -33,6 +33,6 @@ var order =  module.exports = mongoose.model('orders',orders_schema);
 module.exports.getOrders = function(callback,limit){
 	order.find(callback).limit(limit);
 }
-module.exports.getOrdersByUserId = function(id,callback){
+module.exports.getOrdersById = function(id,callback){
 	order.find({contact:id},callback).sort({created_date:-1});
 }

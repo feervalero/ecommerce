@@ -6,12 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 /*Routes*/
 var index = require('./routes/index');
-var users = require('./routes/users');
-var orders = require('./routes/orders');
-var contacts = require('./routes/contacts');
-var products = require('./routes/products');
 var fb_auth = require('./routes/fb_auth');
 var mava = require('./routes/mava');
+var api = require('./routes/api');
 var app = express();
 global.IsLogged=false;
 // view engine setup
@@ -27,11 +24,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/',mava);
 app.use('/index', index);
-app.use('/users', users);
-app.use('/orders',orders);
-app.use('/contacts',contacts);
 app.use('/fbauth',fb_auth);
-app.use('/products',products);
+app.use('/api',api);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 	var err = new Error('Not Found');

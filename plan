@@ -118,6 +118,8 @@ shipping_address:{
 }
 
 payments:{
+	orderid:"02020202",
+	contactid:"02020202",
 	payment_type:"1",
 	credit_card:"99795729",
 	amount:"909.44",
@@ -128,3 +130,31 @@ payments:{
 {"contact":"01010101","sku":"10046689","display_name":"Sombra Mineral Compacta Mary Kay® Sage","price":"39","inventory":"1","new":"0"}
 {"contact":"01010101","sku":"10067230","display_name":"Belara Midnight® 50 ml","price":"365.5","inventory":"1","new":"1"}
 {"contact":"01010101","sku":"10081724","display_name":"Flamenco Red","price":"167","inventory":"0","new":"0"}
+
+
+aPi{
+	"/contacts":{
+		"/":getContacts,
+		"/:id":GetContactById
+	},
+	"/orders":{
+		"/":getOrders,
+		"/:id":GetOrdersById
+	},
+	"/products":{
+		"/":GetProducts
+	},
+	"/favorites":{
+		"/":getFavorites,
+		"/:id":getFavoritesById
+	},
+	"/payments":{
+		"/":getPayments,
+		"/:id":getPaymentsById
+	},
+	"/addresses":{
+		"/":getAddresses,
+		"/:id":getAddressesById
+	}
+	
+}
