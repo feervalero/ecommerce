@@ -9,8 +9,10 @@ var index = require('./routes/index');
 var fb_auth = require('./routes/fb_auth');
 var mava = require('./routes/mava');
 var api = require('./routes/api');
+var cors = require('cors');
 var app = express();
 global.IsLogged=false;
+app.use(cors({origin:"*"}));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
