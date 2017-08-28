@@ -7,8 +7,9 @@ var Favs = require('../models/favorites_model');
 var Payments = require('../models/payments_model');
 var Addresses = require('../models/addresses_model');
 var mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost/basket');
-mongoose.connect('mongodb://feervalero:IAS343073@cluster0-shard-00-00-qvk6z.mongodb.net:27017,cluster0-shard-00-01-qvk6z.mongodb.net:27017,cluster0-shard-00-02-qvk6z.mongodb.net:27017/basket?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin',{ useMongoClient: true });
+var Menus = require('../models/menus_model');
+mongoose.connect('mongodb://localhost/basket');
+//mongoose.connect('mongodb://feervalero:IAS343073@cluster0-shard-00-00-qvk6z.mongodb.net:27017,cluster0-shard-00-01-qvk6z.mongodb.net:27017,cluster0-shard-00-02-qvk6z.mongodb.net:27017/basket?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin',{ useMongoClient: true });
 /*API
 	{
 		"/contacts":{
@@ -136,6 +137,14 @@ router.get('/Addresses/:id', function(req, res, next) {
   });
 });
 
+router.get('/menus', function(req, res, next) {
+  Menus.getMenus(function(err,data){
+  		if(err){
+  			throw err;
+  		}
+  		res.json(data);
+  });
+});
 
 
 
