@@ -83,6 +83,15 @@ router.get('/products', function(req, res, next) {
   });
 });
 
+router.get('/products/:id', function(req, res, next) {
+  Products.getProductById(req.params.id,function(err,data){
+      if(err){
+        throw err;
+      }
+      res.json(data);
+  });
+});
+
 router.get('/favorites', function(req, res, next) {
   Favs.getFavorites(function(err,orders){
   		if(err){

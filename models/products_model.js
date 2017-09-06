@@ -14,3 +14,8 @@ module.exports.getProducts = function(callback,limit){
 	product.find(callback).limit(limit);
 }
 
+
+module.exports.getProductById = function(id,callback){
+	product.find({sku:id},callback);
+}
+
