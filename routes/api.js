@@ -12,10 +12,15 @@ mongoose.connect('mongodb://localhost/basket');
 //mongoose.connect('mongodb://feervalero:IAS343073@cluster0-shard-00-00-qvk6z.mongodb.net:27017,cluster0-shard-00-01-qvk6z.mongodb.net:27017,cluster0-shard-00-02-qvk6z.mongodb.net:27017/basket?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin',{ useMongoClient: true });
 /*API
 	{
-		"/contacts":{
+
+		"GET/contacts":{
 			"/":getContacts, Ok
+      "/email/:email":searchByEmail, Ok
 			"/:id":GetContactById Ok
 		},
+    "POST/contacts":{
+      add Contact
+    },
 		"/orders":{
 			"/":getOrders, Ok
 			"/:id":GetOrdersById Ok
@@ -46,6 +51,15 @@ router.get('/contacts', function(req, res, next) {
   		res.json(orders);
   });
 });
+router.post('/contacts', function(req, res, next) {
+  var contact = req.body;
+  Contacts.addContact(contact,function(err,data){
+      if(err){
+        throw err;
+      }
+      res.json(data);
+  });
+});
 
 router.get('/contacts/:id', function(req, res, next) {
   Contacts.getContactById(req.params.id,function(err,orders){
@@ -55,6 +69,15 @@ router.get('/contacts/:id', function(req, res, next) {
   		res.json(orders);
   });
 });
+router.get('/contacts/email/:id', function(req, res, next) {
+  Contacts.searchByEmail(req.params.id,function(err,data){
+      if(err){
+        throw err;
+      }
+      res.json(data);
+  });
+});
+
 
 router.get('/orders', function(req, res, next) {
   Orders.getOrders(function(err,orders){
