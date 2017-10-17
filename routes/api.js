@@ -19,7 +19,7 @@ mongoose.connect('mongodb://localhost/basket');
 			"/:id":GetContactById Ok
 		},
     "POST/contacts":{
-      add Contact
+      add Contact Ok
     },
 		"/orders":{
 			"/":getOrders, Ok
@@ -51,6 +51,7 @@ router.get('/contacts', function(req, res, next) {
   		res.json(orders);
   });
 });
+
 router.post('/contacts', function(req, res, next) {
   var contact = req.body;
   Contacts.addContact(contact,function(err,data){
@@ -90,10 +91,34 @@ router.get('/orders', function(req, res, next) {
 
 router.get('/orders/:id', function(req, res, next) {
   Orders.getOrdersById(req.params.id,function(err,orders){
-  		if(err){
-  			throw err;
-  		}
-  		res.json(orders);
+      if(err){
+        throw err;
+      }
+      res.json(orders);
+  });
+});
+router.get('/orders/:contactid/:stageid', function(req, res, next) {
+  Orders.getOrderInStageById(req.params.contactid,req.params.stageid,function(err,orders){
+      if(err){
+        throw err;
+      }
+      res.json(orders);
+  });
+});
+router.delete('/orders/:contactid/:stageid', function(req, res, next) {
+  Orders.deleteOrderWithStage(req.params.contactid,req.params.stageid,function(err,orders){
+      if(err){
+        throw err;
+      }
+      res.json(orders);
+  });
+});
+router.post('/orders', function(req, res, next) {
+  Orders.addOrder(req.body,function(err,order){
+      if(err){
+        throw err;
+      }
+      res.json(order);
   });
 });
 
